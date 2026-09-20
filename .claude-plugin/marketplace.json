@@ -1,5 +1,6 @@
 {
   "name": "dr-dimitru-claude-tools",
+  "description": "Claude Code plugins maintained by dr.dimitru",
   "owner": {
     "name": "dr.dimitru",
     "url": "https://github.com/dr-dimitru"
@@ -7,13 +8,20 @@
   "plugins": [
     {
       "name": "claude-jev",
-      "source": "./plugins/claude-jev",
-      "description": "Semantic guardrails and output verification for Claude Code powered by TypeSafe Jev",
-      "version": "0.1.0",
+      "source": {
+        "source": "github",
+        "repo": "dr-dimitru/claude-jev-plugin"
+      },
+      "description": "Semantic tool-use judgments and output checks through TypeSafe Jev",
       "author": {
         "name": "dr.dimitru",
         "url": "https://github.com/dr-dimitru"
-      }
+      },
+      "homepage": "https://github.com/dr-dimitru/claude-jev-plugin",
+      "repository": "https://github.com/dr-dimitru/claude-jev-plugin",
+      "license": "BSD-3-Clause",
+      "category": "security",
+      "tags": ["guardrails", "typesafe", "tool-use"]
     }
   ]
 }

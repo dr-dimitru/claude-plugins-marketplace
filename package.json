@@ -1,0 +1,9 @@
+{
+  "name": "dr-dimitru-claude-tools-marketplace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/validate-marketplace.mjs",
+    "validate:marketplace": "claude plugin validate . --strict"
+  }
+}

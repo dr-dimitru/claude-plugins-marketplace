@@ -1,0 +1,3 @@
+[submodule "plugins/claude-jev"]
+	path = plugins/claude-jev
+	url = ../claude-jev-plugin

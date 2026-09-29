@@ -11,10 +11,11 @@ const manifest = JSON.parse(
 const plugin = manifest.plugins.find(entry => entry.name === "claude-jev");
 
 assert.ok(plugin, "claude-jev marketplace entry is required");
-assert.deepEqual(plugin.source, {
-  source: "github",
-  repo: "dr-dimitru/claude-jev-plugin",
-});
+assert.equal(plugin.source.source, "github");
+assert.equal(plugin.source.repo, "dr-dimitru/claude-jev-plugin");
+// Installs come from a release tag, not from whatever is on main.
+assert.match(plugin.source.ref, /^v\d+\.\d+\.\d+$/);
+assert.equal(Object.keys(plugin.source).sort().join(","), "ref,repo,source");
 assert.equal("version" in plugin, false);
 assert.equal(fs.existsSync(path.join(root, ".gitmodules")), false);
 const entry = execFileSync("git", ["ls-files", "-s", "plugins/claude-jev"], {

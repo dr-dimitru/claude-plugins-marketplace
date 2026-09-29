@@ -24,7 +24,13 @@ Until those repositories are published or made accessible, use local checkout pa
 /plugin enable claude-jev@dr-dimitru-claude-tools
 ```
 
-The plugin installs disabled by default because it sends bounded judgment data to TypeSafe and may incur API cost. Set `TYPESAFE_API_KEY` before enabling it.
+The plugin installs disabled by default because it sends bounded judgment data to TypeSafe and may incur API cost. Set `TYPESAFE_API_KEY` before enabling it. A local Kev or Laya server on a loopback endpoint needs no TypeSafe key; see the plugin README for the global `model` and `endpoint` settings.
+
+Version 0.2.0 adds the user-invoked `/claude-jev:decide` skill and the `claude-jev ask` command for custom typed questions.
+
+## Releases
+
+The marketplace entry pins `source.ref` to a release tag of `dr-dimitru/claude-jev-plugin`. To publish a release, tag the plugin repository (for example `v0.2.0`) after the release commit is on `main`, then update `ref` here.
 
 ## Update
 

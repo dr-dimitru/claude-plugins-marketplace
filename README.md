@@ -26,7 +26,7 @@ Until those repositories are published or made accessible, use local checkout pa
 
 The plugin installs disabled by default because it sends bounded judgment data to TypeSafe and may incur API cost. Set `TYPESAFE_API_KEY` before enabling it. A local Kev or Laya server on a loopback endpoint needs no TypeSafe key; see the plugin README for the global `model` and `endpoint` settings.
 
-Version 0.2.0 adds the user-invoked `/claude-jev:decide` skill and the `claude-jev ask` command for custom typed questions.
+Version 0.2.0 adds the user-invoked `/claude-jev:decide` skill and the `claude-jev ask` command for custom typed questions. Version 0.2.1 fixes `claude-jev status`, `last`, `enable`, `disable`, and `mode`, which read a different state directory than the hooks inside Claude Code, and adds a measured comparison of hosted Jev, Kev, and Laya.
 
 ## Releases
 
